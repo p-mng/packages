@@ -304,7 +304,7 @@
 ///                          "down" for reverse alphabetical order,
 ///                          none for no sort (print in the order they are defined).
 /// - case-sensitive (bool): Whehter to sort the acronyms case-sensitive. Only relevant if sorting is enabled.
-/// - title (content): Title of the acronym index.
+/// - title (content): Title of the acronym index. When set to none, the index will not have a title.
 /// - delimiter (string): Delimiter between acronym and its definition.
 /// - row-gutter: Row-gutter argument used to arrange the index in a grid. See documentation of grid() for details.
 /// - used-only (bool): Only include the acronyms in the index that are used in the document.
@@ -333,7 +333,7 @@
     message: "\"column-ratio\" must be a positive value.",
   )
 
-  if title != "" {
+  if title != none {
     heading(depth: depth, numbering: numbering, outlined: outlined)[#title]
   }
 
